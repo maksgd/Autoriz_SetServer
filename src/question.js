@@ -16,6 +16,23 @@ export class Question {
         .then(Question.renderList)
     }
 
+    static fetch(token) { 
+        if (!token) { // В случае неверно введенных данных
+            return Promise.resolve('<p class="error">У вас нет токена</p>')
+        }
+        return fetch(`https://autoriz-setdate-default-rtdb.firebaseio.com/questions.json?auth=${token}`) // Добавим параметр, чтобы читать могли только авторизированные пользователи, это мы узнаем благодаря значению token
+        .then(response => response.json())
+        .then(response => {
+            if (response && response.error) {
+                return `<p class="error">${response.error}</p>`
+            }
+            return response ? Object.keys(response).map(key => ({ // Узнаем есть ли в resp что либо, далее работаем с массивом из ключей 
+                ...response[key], // Трансформируем массив ключей в нужный формат
+                id: key
+            })) : [] // Иначе пустой массив
+        })
+    }
+
     static renderList() {
         const questions = getQuestionsFromLocalStorage()
 
@@ -27,7 +44,14 @@ export class Question {
 
         list.innerHTML = html
     }
+
+    static listToHTML(questions) {
+        return questions.length
+        ? `<ol>${questions.map(q => `<li>${q.text}</li>`).join('')}</ol>`
+        : '<p>Вопросов пока нет</p>'
+    }
 }
+
 
 function addToLocalStorage(question) { // Функция для LS
     const all = getQuestionsFromLocalStorage() 
