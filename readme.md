@@ -1,5 +1,5 @@
 # Авторизация / запись на сервер
-[Результат](https://maksgd.github.io/Autoriz_SetServer/)
+[Результат](https://autoriz-setdate.web.app/)
 ***
 Firebase в качестве бекенда. 
 Реализовывалась работа благодаря: 
