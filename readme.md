@@ -1,7 +1,13 @@
 # Авторизация / запись на сервер
 [Результат](https://autoriz-setdate.web.app/)
 ***
-Firebase в качестве бекенда. 
+Реализация на чистом JS.
+
+Front - MUI.
+
+Back - Firebase. 
+
+---
 
 Реализовывалась работа благодаря: LocalStorage; Fetch API.
 
