@@ -1,5 +1,5 @@
 # Сайт для подкастов
-[Результат](https://maksgd.github.io/Podcast_site/)
+[Результат](https://maksgd.github.io/podcast_site/)
 ***
 Сайт реализован ради получения опыта работы с LocalStorage, Fetch API, авторизацией, запись на сервер.
 
