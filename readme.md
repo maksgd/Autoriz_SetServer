@@ -1,6 +1,8 @@
-# Авторизация / запись на сервер
-[Результат](https://autoriz-setdate.web.app/)
+# Сайт для подкастов
+[Результат](https://maksgd.github.io/Podcast_site/)
 ***
+Сайт реализован ради получения опыта работы с LocalStorage, Fetch API, авторизацией, запись на сервер.
+
 Реализация на чистом JS.
 
 Front - MUI.
