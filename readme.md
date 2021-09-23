@@ -1,5 +1,5 @@
 # Сайт для подкастов
-[Результат](https://maksgd.github.io/Autoriz_SetServer/)
+[Результат](https://autoriz-setdate.web.app/)
 
 Сайт реализован ради получения опыта работы с LocalStorage, Fetch API, авторизацией, запись на сервер.
 
